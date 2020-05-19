@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #This page shows all posts
   get '/posts', to: 'posts#index', as: 'posts'
 
-  get '/posts/:id', to: 'posts#show', as: 'post'
+  #get '/posts/:id', to: 'posts#show', as: 'post'
 
   get '/posts/new', to: 'posts#new', as: 'post_new'
   post '/posts/new', to: 'posts#create', as: 'post_create'
