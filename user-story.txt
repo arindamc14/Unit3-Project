@@ -1,0 +1,19 @@
+User Story
+
+Presently, there is no centralised platform for lost and found pets in Singapore. 
+
+Users who find pets need to reach out to a large audience to broadcast the details on the pet that he or she found. 
+
+Owners who lose their pets need a way to share their contact details. 
+
+Facebook has multiple groups where users make posts. This isn’t a great user interface and often has too many posts on the page where matching the lost pet and the owner becomes difficult.
+
+Hence, the app serves to provide a better lost and found platform for pet owners and users who find pets to communicate.
+
+The posts (related to lost and found pets) that are hosted on the platform will contain more relevant information (contact details, pet description, pet photo, location details). This will ensure that the page is not littered with non-relevant posts.
+
+A better user interface will incentivise users who find pets to use the platform. It will also make the process of matching the lost pet with the owner more efficient.   
+
+
+
+
