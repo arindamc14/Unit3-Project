@@ -1,5 +1,7 @@
 {
   "name": "unit3-project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "lottie-web": "^5.6.10"
+  }
 }
