@@ -44,6 +44,13 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:location, :description, :pet_type_id, :pet_status_id, :user_id)
+      # Temporary params for mvp
+      params.require(:post_new).permit(:location, :description)
+
+      # Final params
+      #----------------------------------------------------------------------
+      # params.require(:post).permit(:location, :description, :url, :pet_type_id, :pet_status_id, :user_id, )
+      #----------------------------------------------------------------------
+
     end
 end
