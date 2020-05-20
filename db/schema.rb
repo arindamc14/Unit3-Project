@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_073609) do
   end
 
   create_table "pet_types", force: :cascade do |t|
-    t.string "type"
+    t.string "typee"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
