@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @type = PetType.all
   end
 
   def edit
@@ -16,10 +17,11 @@ class PostsController < ApplicationController
   end
 
   def create
+
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post
+      redirect_to posts_path
     else
       render 'new'
     end
@@ -45,7 +47,7 @@ class PostsController < ApplicationController
   private
     def post_params
       # Temporary params for mvp
-      params.require(:post_new).permit(:location, :description)
+      params.require(:post).permit(:user_id, :pet_type_id, :location, :description)
 
       # Final params
       #----------------------------------------------------------------------

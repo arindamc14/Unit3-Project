@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   #get '/posts/:id', to: 'posts#show', as: 'post'
 
   get '/posts/new', to: 'posts#new', as: 'post_new'
-  post '/posts/new', to: 'posts#create', as: 'post_create'
+  post '/posts', to: 'posts#create'
 
   get '/posts/edit', to: 'posts#edit', as: 'post_edit'
-  put '/posts/edit', to: 'posts#update', as: 'post_update'
+  put '/posts/edit', to: 'posts#update'
 
   delete '/posts/:id', to: 'posts#delete', as: 'post_delete'
 
