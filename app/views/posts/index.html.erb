@@ -1,26 +1,39 @@
 
 <h1>Lost & Found Pets!</h1>
 
-<p>List of all the posts:</p>
 
-<% if user_signed_in? && current_user.admin %>
-  <p>Here are your super secret admin powers, sir:</p>
+
+
+
+
+<% if user_signed_in? %>
+
+<%= link_to 'log out', destroy_user_session_url, method: :delete %>
+
+<%= link_to 'New Post', post_new_path %>
+
+<% else %>
+<a> Please Login or Signup to post a Lost or Found case: </a>
+
+<%= link_to 'log in', new_user_session_url %>
+
+<%= link_to 'sign up', new_user_registration_url %>
+
+
 <% end %>
 
+<p>List of all the posts:</p>
 
 <% @posts.each do |post| %>
-  <div class="card my-3" id="myID" style="width: 18rem">
-    <h4 class="card-pet-status">
-        <%= post.pet_status.status %><br/>
-    <img src=<%= post.url %> class:"card-img-top"/>
-    <div class="card-body">
-    	<h4 class="card-pet-type">
-        <%= post.pet_type.typee %><br/>
-      <h5 class="card-description">
-        <%= post.description %><br/>
-      </h5>
-      <p class="card-location">
-        <%= post.location %>
+  <div>
+    <a> Pet Status: </a><%= post.pet_status.status %><br/>
+    <a>Post Date: </a><%= post.created_at %><br/> 
+    <img src=<%= post.url %>
+
+        <a>Pet Type: </a><%= post.pet_type.typee %><br/>
+        <a> Description: </a><%= post.description %><br/>
+        <a> Location: </a><%= post.location %><br/>
+        <%= link_to 'Show', post_path(post) %>
       </p>
     </div>
   </div>

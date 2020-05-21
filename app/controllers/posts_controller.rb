@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order('created_at DESC');
   end
 
   def show
     @post = Post.find(params[:id])
+
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
   end
 
   def new
@@ -47,7 +51,7 @@ class PostsController < ApplicationController
   private
     def post_params
       # Temporary params for mvp
-      params.require(:post).permit(:user_id, :pet_type_id, :location, :description, :pet_status_id)
+      params.require(:post).permit(:user_id, :pet_type_id, :location, :description, :pet_status_id, :url, :created_at)
 
       # Final params
       #----------------------------------------------------------------------
