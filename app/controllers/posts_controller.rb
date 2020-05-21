@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @type = PetType.all
+    @statuses = PetStatus.all
   end
 
   def edit
