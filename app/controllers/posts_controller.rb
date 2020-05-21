@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   def create
 
     @post = Post.new(post_params)
-
+    byebug
     if @post.save
       redirect_to posts_path
     else
@@ -47,7 +47,7 @@ class PostsController < ApplicationController
   private
     def post_params
       # Temporary params for mvp
-      params.require(:post).permit(:user_id, :pet_type_id, :location, :description)
+      params.require(:post).permit(:user_id, :pet_type_id, :location, :description, :pet_status_id)
 
       # Final params
       #----------------------------------------------------------------------
