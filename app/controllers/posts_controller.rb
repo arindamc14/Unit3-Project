@@ -19,11 +19,16 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @type = PetType.all
+    @statuses = PetStatus.all
+
+
   end
 
   def create
 
     @post = Post.new(post_params)
+    @post.user = current_user
 
     if @post.save
       redirect_to posts_path
@@ -34,8 +39,12 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    @post.user = current_user
 
     if @post.update(post_params)
+      puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+      puts post_params
+      puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
       redirect_to @post
     else
       render 'edit'
