@@ -7,10 +7,11 @@
 
 
 <% if user_signed_in? %>
-
-<%= link_to 'log out', destroy_user_session_url, method: :delete %>
+<%= link_to 'Profile', user_profile_path %>
 
 <%= link_to 'New Post', post_new_path %>
+
+<%= link_to 'log out', destroy_user_session_url, method: :delete %>
 
 <% else %>
 <a> Please Login or Signup to post a Lost or Found case: </a>
@@ -27,7 +28,7 @@
 <% @posts.each do |post| %>
   <div>
     <a> Pet Status: </a><%= post.pet_status.status %><br/>
-    <a>Post Date: </a><%= post.created_at %><br/> 
+    <a>Post Date: </a><%= post.created_at %><br/>
     <img src=<%= post.url %>
 
         <a>Pet Type: </a><%= post.pet_type.typee %><br/>
@@ -37,4 +38,5 @@
       </p>
     </div>
   </div>
+
 <% end %>
