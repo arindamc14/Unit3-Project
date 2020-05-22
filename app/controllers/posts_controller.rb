@@ -7,6 +7,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def account
+
+  end
+
   def new
     @post = Post.new
     @type = PetType.all

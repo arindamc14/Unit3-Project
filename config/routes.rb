@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   delete '/posts/:id', to: 'posts#delete', as: 'post_delete'
 
+  get '/profile', to: 'posts#account', as: 'user_profile'
+
 end
