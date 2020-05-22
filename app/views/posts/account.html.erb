@@ -2,6 +2,21 @@
 
 
 
-<% @post.each do |post| %>
-	<%= post %><br>
+<% @userpost.each do |post| %>
+	<div>
+		<div>
+			<p>
+	    	<a> Pet Status: </a><%= post.pet_status.status %><br/>
+
+	    <%= post.url %>
+
+	      <a>Pet Type: </a><%= post.pet_type.typee %><br/>
+	      <a> Description: </a><%= post.description %><br/>
+	      <a> Location: </a><%= post.location %><br/>
+	      <a>Post Date: </a><%= post.created_at %><br/>
+	      <%= link_to 'Show', post_path(post) %>
+	      <%= link_to 'Account', post_path(post) %>
+      </p>
+    </div>
+  </div>
 <% end %>

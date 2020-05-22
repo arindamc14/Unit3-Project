@@ -12,13 +12,8 @@ class PostsController < ApplicationController
   end
 
   def account
-    @post = Post.where(user_id: current_user.id).pluck(:location)
+    @userpost = Post.where(user_id: current_user.id)
     @email = current_user.email
-    @user = current_user.id
-    puts '???????????????????????????????'
-    puts @user
-    puts '???????????????????????????????'
-
   end
 
   def new
@@ -51,10 +46,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.user = current_user
 
+    # to check for any errors
     if @post.update(post_params)
-      puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-      puts post_params
-      puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
       redirect_to @post
     else
       render 'edit'
