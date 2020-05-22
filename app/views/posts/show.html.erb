@@ -1,0 +1,30 @@
+
+<p>
+  <strong>Pet Status: </strong>
+  <%= @post.pet_status.status %>
+</p>
+
+<p>
+	<img src=<%= @post.url %>
+</p>
+
+
+<p>
+  <strong>Description: </strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>Location: </strong>
+  <%= @post.location %>
+</p>
+
+<% if @user == @post.user %>
+	<td><%= link_to 'Delete', post_path(@post),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+    <%= link_to 'Edit', post_edit_path(@post) %>
+
+<% end %>
+
+<%= link_to 'Back', root_path %>
