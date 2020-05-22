@@ -23,7 +23,6 @@
     <%= link_to  post_path(post) do %>
       <img src=<%= post.url %> class:"card-img-top index-img"/>
       <% end %>
-      <%= link_to post_path(post) do %>
         <div class="index-card-body">
             <h4 class="card-pet-status-index">
             <%= post.pet_status.status + ": " + post.pet_type.typee  %>
@@ -38,8 +37,10 @@
             <p class="card-location">
             Location: <%= post.location %>
             </p>
+            <%= link_to post_path(post) do %>
+              <div class="test"></div>
+               <% end %>
         </div>
-      <% end %>
     </div>
 
   <% end %>
