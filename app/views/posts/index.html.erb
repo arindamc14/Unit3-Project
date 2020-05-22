@@ -1,3 +1,8 @@
+<%= stylesheet_link_tag "postIndex" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
+
+
 <h1>Lost & Found Pets!</h1>
 
 <p>List of all the posts:</p>
@@ -5,22 +10,25 @@
 <% if user_signed_in? && current_user.admin %>
   <p>Here are your super secret admin powers, sir:</p>
 <% end %>
-
-
-<% @posts.each do |post| %>
-  <div class="card my-3" id="myID" style="width: 18rem">
-    <h4 class="card-pet-status">
-        <%= post.pet_status.status %><br/>
-    <img src=<%= post.url %> class:"card-img-top"/>
-    <div class="card-body">
-    	<h4 class="card-pet-type">
-        <%= post.pet_type.typee %><br/>
-      <h5 class="card-description">
-        <%= post.description %><br/>
-      </h5>
-      <p class="card-location">
-        <%= post.location %>
-      </p>
+<main class="index-container">
+  <% @posts.each do |post| %>
+    <div class="card my-3 index-div" id="myID" >
+      <img src=<%= post.url %> class:"card-img-top index-img"/ data-text="hello">
+      <div class="index-card-body">
+          <h4 class="card-pet-status-index">
+          <%= post.pet_status.status + ": " + post.pet_type.typee  %>
+          </h4>  
+        <p class="card-description">
+        Details:
+          <%= post.description %>
+        </p>
+        <p class="card-location">
+        Location: <%= post.location %>
+        </p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</main>
+
+
+

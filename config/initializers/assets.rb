@@ -15,3 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( lottie.js )
 Rails.application.config.assets.precompile += %w( signup.js )
+Rails.application.config.assets.precompile += %w( signup.css )
+Rails.application.config.assets.precompile += %w( postIndex.css )
