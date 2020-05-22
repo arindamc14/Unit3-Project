@@ -3,9 +3,6 @@
 <%= form_with scope: @post, model: @post, local: true do |form| %>
 
 
-<!--  | location | url | description | -->
-
-<%= form.hidden_field :user_id, :value => 1 %>
 
   <p>
   <%= form.label :pet_status_id %><br>
@@ -27,10 +24,6 @@
   <%= form.text_area :description %>
   </p>
 
-  <p>
-  <%= form.label :pet_status_id %><br>
-  <%= form.collection_select :pet_status_id, @statuses, :id, :status %>
-  </p>
 
   <p>
   <%= form.submit %>
