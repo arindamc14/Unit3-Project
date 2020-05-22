@@ -7,6 +7,11 @@
 <%= form.hidden_field :user_id, :value => 1 %>
 
   <p>
+  <%= form.label :pet_status_id %><br>
+  <%= form.collection_select :pet_status_id, @statuses, :id, :status %>
+  </p>
+
+  <p>
 	<%= form.label :pet_type_id %><br>
 	<%= form.collection_select :pet_type_id, @type, :id, :typee %>
   </p>
@@ -21,12 +26,11 @@
 	<%= form.text_area :description %>
   </p>
 
-  <p>
-	<%= form.label :pet_status_id %><br>
-	<%= form.text_area :pet_status_id %>
-  </p>
+  
 
   <p>
 	<%= form.submit %>
   </p>
 <% end %>
+
+<%= link_to 'Back', root_path %>
