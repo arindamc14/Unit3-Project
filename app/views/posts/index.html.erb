@@ -1,14 +1,32 @@
+<<<<<<< HEAD
 <%= stylesheet_link_tag "postIndex" %>
 <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
 <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
+=======
+>>>>>>> d00289dc201ec091ff4e447a43e4f06cb897acae
 
 <h1>Lost & Found Pets!</h1>
 
-<p>List of all the posts:</p>
 
-<% if user_signed_in? && current_user.admin %>
-  <p>Here are your super secret admin powers, sir:</p>
+
+
+
+
+<% if user_signed_in? %>
+
+<%= link_to 'log out', destroy_user_session_url, method: :delete %>
+
+<%= link_to 'New Post', post_new_path %>
+
+<% else %>
+<a> Please Login or Signup to post a Lost or Found case: </a>
+
+<%= link_to 'log in', new_user_session_url %>
+
+<%= link_to 'sign up', new_user_registration_url %>
+
+
 <% end %>
 <main class="index-container">
   <% @posts.each do |post| %>
@@ -31,4 +49,22 @@
 </main>
 
 
+<p>List of all the posts:</p>
 
+<<<<<<< HEAD
+=======
+<% @posts.each do |post| %>
+  <div>
+    <a> Pet Status: </a><%= post.pet_status.status %><br/>
+    <a>Post Date: </a><%= post.created_at %><br/> 
+    <img src=<%= post.url %>
+
+        <a>Pet Type: </a><%= post.pet_type.typee %><br/>
+        <a> Description: </a><%= post.description %><br/>
+        <a> Location: </a><%= post.location %><br/>
+        <%= link_to 'Show', post_path(post) %>
+      </p>
+    </div>
+  </div>
+<% end %>
+>>>>>>> d00289dc201ec091ff4e447a43e4f06cb897acae
