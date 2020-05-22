@@ -1,9 +1,14 @@
+
+
+
 <%= form_with scope: :post, url: posts_path, local: true do |form| %>
 
 <h1>Hi, please fill this form</h1>
 
-<!--  | location | url | description | -->
 
+
+  <label for="file">File to Upload</label> <%= form.file_field :file %>
+  
 
 
   <p>
