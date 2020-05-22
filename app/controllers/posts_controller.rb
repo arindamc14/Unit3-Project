@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.order('created_at DESC');
   end
@@ -19,12 +20,27 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @type = PetType.all
+    @statuses = PetStatus.all
+
+
   end
 
   def create
 
-    @post = Post.new(post_params)
+    @post = Post.new
+    @post.location = post_params[:location]
+    @post.description = post_params[:description]
+    @post.pet_type_id = post_params[:pet_type_id]
+    @post.pet_status_id = post_params[:pet_status_id]
+    @post.user = current_user
 
+
+    Cloudinary::Uploader.upload(post_params[:file], options = {})
+    uploaded_file = post_params[:file].path
+    cloudnary_file = Cloudinary::Uploader.upload(uploaded_file)
+   
+    @post.url = cloudnary_file["url"]
     if @post.save
       redirect_to posts_path
     else
@@ -34,6 +50,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    @post.user = current_user
 
     if @post.update(post_params)
       redirect_to @post
@@ -52,7 +69,7 @@ class PostsController < ApplicationController
   private
     def post_params
       # Temporary params for mvp
-      params.require(:post).permit(:user_id, :pet_type_id, :location, :description, :pet_status_id, :url, :created_at)
+      params.require(:post).permit(:user_id, :file, :pet_type_id, :location, :description, :pet_status_id, :url, :created_at)
 
       # Final params
       #----------------------------------------------------------------------
