@@ -10,7 +10,7 @@
 
 <%= link_to 'log out', destroy_user_session_url, method: :delete %>
 
-<%= link_to 'New Post', post_new_path %>
+<%= link_to 'Report a Lost/Found Case', post_new_path %>
 
 <% else %>
 <p class="index-prompt"> Please <%= link_to 'log in', new_user_session_url %> or <%= link_to 'sign up', new_user_registration_url %> to post a Lost or Found case. </p>
