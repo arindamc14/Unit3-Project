@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :pet_type
   belongs_to :pet_status
+
+  paginates_per 6
   
 
 
