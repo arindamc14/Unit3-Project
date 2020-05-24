@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :conversations do
+    resources :messages
+  end
 
   root 'posts#index'
 
@@ -22,5 +25,8 @@ Rails.application.routes.draw do
   patch '/posts/:id', to: 'posts#update'
 
   delete '/posts/:id', to: 'posts#delete', as: 'post_delete'
+
+
+  # get '/conversations', to: 'conversations#index',
 
 end
