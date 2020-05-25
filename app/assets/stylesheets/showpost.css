@@ -1,0 +1,81 @@
+body {
+  font-family: "Bellota Text", cursive;
+  margin: 0 auto;
+}
+
+.postcontainer {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.postimg {
+  text-align: center;
+}
+
+.postimg > img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  margin: 30px auto;
+  border-radius: 25%;
+  position: relative;
+  margin-left: 9px;
+}
+
+.postimg::before {
+  content: "";
+  width: 464px;
+  height: 464px;
+  border: dotted black 2px;
+  border-radius: 25%;
+  position: absolute;
+  margin: 0 auto;
+  top: 21px;
+}
+
+/* .postimg::after {
+  content: "";
+  width: 440px;
+  height: 440px;
+  border: solid black 1px;
+  border-radius: 25%;
+  position: absolute;
+  margin: 0 auto;
+  top: 21px;
+} */
+
+.postdescription {
+  width: 450px;
+  text-align: center;
+  margin: 5px auto;
+}
+
+@keyframes play30 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -900px 0px;
+  }
+}
+
+.lgshapeshifter {
+  animation-duration: 500ms;
+  animation-timing-function: steps(30);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  margin: 10px;
+}
+.lgshapeshifter:hover {
+  animation-name: play30;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.backlogo {
+  margin: 10px auto;
+  text-align: center;
+}
