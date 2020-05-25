@@ -5,20 +5,20 @@
 
 <h1 class="index-title">Wandering Pet</h1>
 <div class = "index-animation-container">
-  <div class ="petbox blurbox">
+  <div class ="petbox blurbox" data-text="Report Found Pet">
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
   <%= javascript_include_tag "lottie.js" %>
   <%= javascript_include_tag "petindex.js" %>
   </div>
 
-  <div class ="indexlostpet blurbox">
+  <div class ="indexlostpet blurbox" data-text="Report Lost Pet">
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
   <%= javascript_include_tag "lottie.js" %>
   <%= javascript_include_tag "petindex1.js" %>
   </div>
 
    <a class="pagelink" href="#helloh1">
-    <div class ="indexallpet blurbox">
+    <div class ="indexallpet blurbox" data-text="View All Pets">
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
     <%= javascript_include_tag "lottie.js" %>
     <%= javascript_include_tag "petindex2.js" %>
@@ -37,9 +37,19 @@
 <% if user_signed_in? %>
 
 <div class= "indexaction">
-<span class="indexlogout"><%= link_to 'log out', destroy_user_session_url, method: :delete %></span>
 
-<span class="indexnewpost"><%= link_to 'New Post', post_new_path %></span>
+  <span class="indexnewpost">
+  <%= link_to post_new_path do %>
+  <div class="lgshapeshifter" style="background-image: url(/assets/newpost.svg)"></div>
+  <% end %>
+  </span>
+
+  <span class="indexlogout ">
+    <%= link_to  destroy_user_session_url, method: :delete do %>
+      <div class="lgshapeshifter" style="background-image: url(/assets/logout.svg)">
+      </div>
+      <% end %>
+  </span>
 
 </div>
 
