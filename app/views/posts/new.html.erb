@@ -1,41 +1,55 @@
+<%= stylesheet_link_tag "newform" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
-
+ <div class ="petform">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "form.js" %>
+  </div>
 
 <%= form_with scope: :post, url: posts_path, local: true do |form| %>
 
-<h1>Hi, please fill this form</h1>
+<h1 class="form-h1">Hi, please fill this form</h1>
+
+<div class = "uploadfile">
+  <label for="file">File to Upload</label> 
+  <div class="choosefile">
+  <%= form.file_field :file %>
+  </div>  
+</div>  
 
 
-
-  <label for="file">File to Upload</label> <%= form.file_field :file %>
-  
-
-
-  <p>
+  <div class="pet-status-id">
   <%= form.label :pet_status_id %><br>
   <%= form.collection_select :pet_status_id, @statuses, :id, :status %>
-  </p>
+  </div>
 
-  <p>
+  <div class="pet-type-id">
 	<%= form.label :pet_type_id %><br>
 	<%= form.collection_select :pet_type_id, @type, :id, :typee %>
-  </p>
+  </div>
 
-  <p>
-	<%= form.label :location %><br>
+  <div class ="location-field">
+	<%= form.label :Location %><br>
 	<%= form.text_field :location %>
-  </p>
+  </div>
 
-  <p>
+  <div class ="description-field">
 	<%= form.label :description %><br>
 	<%= form.text_area :description %>
-  </p>
+  </div>
 
   
 
-  <p>
+  <div class="submitform">
 	<%= form.submit %>
-  </p>
+  </div>
 <% end %>
 
-<%= link_to 'Back', root_path %>
+  <div class="backlogo">
+    <%= link_to  root_path do %>
+      <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)">
+      </div>
+      <% end %>
+  </div>
