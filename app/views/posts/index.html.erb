@@ -3,14 +3,45 @@
 <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
 
+<h1 class="index-title">Wandering Pet</h1>
+<div class = "index-animation-container">
+  <div class ="petbox blurbox">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex.js" %>
+  </div>
 
-<h1 class="index-h1">Lost & Found Pets!</h1>
+  <div class ="indexlostpet blurbox">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex1.js" %>
+  </div>
+
+   <a class="pagelink" href="#helloh1">
+    <div class ="indexallpet blurbox">
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+    <%= javascript_include_tag "lottie.js" %>
+    <%= javascript_include_tag "petindex2.js" %>
+
+    </div>
+  </a>
+</div>
+
+<div class="break"></div>
+
+
+<a href="#helloh1"></a>
+
+<h1 class="index-h1" id="helloh1">Lost & Found Pets!</h1>
 
 <% if user_signed_in? %>
 
-<%= link_to 'log out', destroy_user_session_url, method: :delete %>
+<div class= "indexaction">
+<span class="indexlogout"><%= link_to 'log out', destroy_user_session_url, method: :delete %></span>
 
-<%= link_to 'New Post', post_new_path %>
+<span class="indexnewpost"><%= link_to 'New Post', post_new_path %></span>
+
+</div>
 
 <% else %>
 <p class="index-prompt"> Please <%= link_to 'log in', new_user_session_url %> or <%= link_to 'sign up', new_user_registration_url %> to post a Lost or Found case. </p>
