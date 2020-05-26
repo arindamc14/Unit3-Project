@@ -7,9 +7,12 @@
 <h1 class="index-h1">Lost & Found Pets!</h1>
 
 <% if user_signed_in? %>
+
 <%= link_to 'Profile', user_profile_path %>
 
-<%= link_to 'Report a Lost/Found Case', post_new_path %>
+<%= link_to 'Report a Lost Case', post_new_lost_path %></br>
+
+<%= link_to 'Report a Found Case', post_new_found_path %>
 
 <%= link_to 'log out', destroy_user_session_url, method: :delete %>
 
