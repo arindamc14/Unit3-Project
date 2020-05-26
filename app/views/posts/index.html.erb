@@ -85,7 +85,11 @@
 
 <% if user_signed_in? %>
 
+
 <div class= "indexaction">
+
+<%= link_to 'Profile', user_profile_path %>
+
 
   <a class="indexnewpost" href="#wanderingpet">
   
@@ -102,6 +106,8 @@
 
 </div>
 
+
+<%= link_to 'log out', destroy_user_session_url, method: :delete %>
 
 <% else %>
 <p class="index-prompt"> Please <%= link_to 'log in', new_user_session_url %> or <%= link_to 'sign up', new_user_registration_url %> to post a Lost or Found case. </p>
@@ -120,7 +126,7 @@
             </h4>
             <p class="card-date-index">
             Post Date: </a><%= post.created_at %>
-            </p>  
+            </p>
             <p class="card-description">
             Details:
               <%= post.description %>
@@ -135,10 +141,12 @@
     </div>
 
   <% end %>
+
  
 </main>
 <div class = "pageindicator"
   <%= paginate @posts %>
   </div>
+
 
 
