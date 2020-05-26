@@ -5,7 +5,7 @@ This is our submission for the 3rd Project for SEI-22
 ## What is this app?
 
 Presently, there is no centralised platform for lost and found pets in Singapore. 
-The app serves to provide a better lost and found platform for pet owners and users who find pets to communicate.
+Wandering Pets serves to provide a better lost and found platform for pet owners and users who find pets to communicate.
 
 * Users who find pets need to reach out to a large audience to broadcast the details on the pet that he or she found.
 
@@ -29,34 +29,43 @@ As an owner who lost a pet, there is no easy way to search for specific breed or
 
 Cons to creating a post is that it is tied to your personal account which you may not want to share your exotic pets to others.
 
-### Spotting
+### Other users
 
 Usually when a non-pet lover sees a collared animal wandering outside, he/she might just carry on their own way and that could've
 been a potential rescuer and time could be saved.
 
 
-## Our Goal
+## What we want to achieve
 
 * To make creating a post to be fast and concise
 * Posts to contain more relevant information such as contact details, pet description, pet photo, location details
 * A better user interface to incentivise users who find pets to use the platform.
 * The ability to filter posts by animal type or color
 
+## Pre-project
+* [Userstories](https://github.com/arindamc14/Unit3-Project/blob/master/pre-project/user-story.txt)
+* [Userflow](https://github.com/arindamc14/Unit3-Project/blob/master/pre-project/GA-project-3-userflow.pdf)
+* [Wireframes](https://github.com/arindamc14/Unit3-Project/blob/master/pre-project/Project-3-wireframe-b.pdf)
+* [ERB](https://github.com/arindamc14/Unit3-Project/blob/master/pre-project/Unit-3-Project.pdf)
+
+
 ## To do
-Explanations of the technologies used
-A couple paragraphs about the general approach you took
+Explanations of the technologies used-
+A couple paragraphs about the general approach you took-
 Installation instructions for any dependencies
 Link to your user stories – who are your users, what do they want, and why?
 Link to your wireframes – sketches of major views / interfaces in your application
 Descriptions of any unsolved problems or major hurdles your team had to overcome
 
+## Challenges
+It was a first for all of us to collaborate through git on a projecct, we had a dangerous start where we were all commiting the master branch while avoiding
+
+Working on RubyonRails was a challenge for all of us, especially the way how the MVCs are connected together.
+
 ## Built With
 
+* [RubyonRails](https://guides.rubyonrails.org/) - Application Framework
 * [Cloudinary](https://cloudinary.com/documentation) - To save and display pet images
-
-Wandering Pets is an app that allows users to easily
-* report a pet they had just lost
-* a wandering animal found in their neighbourhood that might belong to an owner.
 
 ## Made by 
 
