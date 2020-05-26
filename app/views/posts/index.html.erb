@@ -8,9 +8,11 @@
 
 <% if user_signed_in? %>
 
-<%= link_to 'log out', destroy_user_session_url, method: :delete %>
+<%= link_to 'log out', destroy_user_session_url, method: :delete %></br>
 
-<%= link_to 'Report a Lost/Found Case', post_new_path %>
+<%= link_to 'Report a Lost Case', post_new_lost_path %></br>
+
+<%= link_to 'Report a Found Case', post_new_found_path %>
 
 <% else %>
 <p class="index-prompt"> Please <%= link_to 'log in', new_user_session_url %> or <%= link_to 'sign up', new_user_registration_url %> to post a Lost or Found case. </p>
