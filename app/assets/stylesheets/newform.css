@@ -2,12 +2,166 @@ body {
   font-family: "Bellota Text", cursive;
   margin: 0 auto;
 }
+.newh1 {
+  font-family: "Martel", serif;
+  font-weight: 800;
+  text-align: center;
+}
 
-.form-h1 {
+.index-animation-container:hover .blurbox {
+  transform: scale(0.98);
+  filter: blur(4px);
+  opacity: 0.5;
+}
+
+.index-animation-container:hover .blurbox:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.index-animation-container {
+  margin: 0 auto;
+  max-width: 900px;
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.pagelink1 {
+  width: 49%;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagelink2 {
+  width: 49%;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.petbox {
+  /* width: 400px; */
+  height: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  float: left;
+  /* width: 350px; */
+  /* display: inline-block; */
+  position: relative;
+}
+
+.petbox:hover {
+  cursor: pointer;
+  box-shadow: 5px 6px 10px 1px rgba(136, 136, 136, 0.7);
+  border-radius: 30px;
+  transform: scale(1);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a > .petbox::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  bottom: 0%;
+  right: 0px;
+  left: 0px;
+  word-wrap: break-word;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.591);
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 900;
+  opacity: 0;
+  transition: 0.5s;
+  color: black;
+  font-family: "Bellota Text", cursive;
+  font-style: normal;
+}
+
+a > .petbox:hover::after {
+  opacity: 1;
+  top: 0%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a > .indexlostpet {
+  /* width: 400px; */
+  height: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  float: left;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  /* width: 350px; */
+  /* display: inline-block; */
+  overflow: hidden;
+  position: relative;
+}
+
+a > .indexlostpet:hover {
+  cursor: pointer;
+  box-shadow: 5px 6px 10px 1px rgba(136, 136, 136, 0.7);
+  border-radius: 30px;
+  transform: scale(1);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a > .indexlostpet::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  bottom: 0%;
+  right: 0px;
+  left: 0px;
+  word-wrap: break-word;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.591);
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 900;
+  opacity: 0;
+  transition: 0.5s;
+  color: black;
+  font-family: "Bellota Text", cursive;
+  font-style: normal;
+}
+
+a > .indexlostpet:hover::after {
+  opacity: 1;
+  top: 0%;
+}
+
+/* .form-h1 {
   font-family: "Martel", serif;
   text-align: center;
   letter-spacing: 2px;
-  /* margin-top: -4px; */
+
   font-weight: 800;
   font-size: 20px;
   margin-bottom: 6px;
@@ -159,5 +313,6 @@ body {
 
 .backlogo {
   margin: 10px auto;
-  text-align: center;
-}
+  display: flex;
+  justify-content: center;
+} */

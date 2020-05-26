@@ -2,63 +2,29 @@
 <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
 <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
-<<<<<<< HEAD
- <div class ="petform">
+<h1 class="newh1">Wandering Pet</h1>
+<div class = "index-animation-container">
+
+<div class ="pagelink1">
+<%= link_to post_new_found_path do %>
+  <div class ="petbox blurbox" data-text="Report Found Pet">
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
   <%= javascript_include_tag "lottie.js" %>
-  <%= javascript_include_tag "form.js" %>
+  <%= javascript_include_tag "petindex.js" %>
   </div>
-=======
-<%= link_to 'I Lost My Pet', post_new_lost_path %>
+  <% end %>
 
-<%= link_to 'I Spotted a Pet', post_new_found_path %>
->>>>>>> 560159eec14304c78db49650f422d9049ed8b49c
-
-
-<<<<<<< HEAD
-<h1 class="form-h1">Hi, please fill this form</h1>
-
-<div class = "uploadfile">
-  <label for="file">File to Upload</label> 
-  <div class="choosefile">
-  <%= form.file_field :file %>
-  </div>  
-</div>  
-
-
-  <div class="pet-status-id">
-  <%= form.label :pet_status_id %><br>
-  <%= form.collection_select :pet_status_id, @statuses, :id, :status %>
   </div>
 
-  <div class="pet-type-id">
-	<%= form.label :pet_type_id %><br>
-	<%= form.collection_select :pet_type_id, @type, :id, :typee %>
-  </div>
-
-  <div class ="location-field">
-	<%= form.label :Location %><br>
-	<%= form.text_field :location %>
-  </div>
-
-  <div class ="description-field">
-	<%= form.label :description %><br>
-	<%= form.text_area :description %>
-  </div>
-
+  <div class ="pagelink2">
+ <%= link_to post_new_lost_path do %>
+  <div class ="indexlostpet blurbox" data-text="Report Lost Pet">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex1.js" %>
   
-
-  <div class="submitform">
-	<%= form.submit %>
   </div>
-<% end %>
+    <% end %>
+    </div>
 
-  <div class="backlogo">
-    <%= link_to  root_path do %>
-      <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)">
-      </div>
-      <% end %>
-  </div>
-=======
-
->>>>>>> 560159eec14304c78db49650f422d9049ed8b49c
+</div>

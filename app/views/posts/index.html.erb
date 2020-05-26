@@ -3,7 +3,7 @@
 <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
 
-<h1 class="index-title">Wandering Pet</h1>
+<h1 class="index-title" id="wanderingpet">Wandering Pet</h1>
 
 <% if user_signed_in? %>
 <div class = "index-animation-container">
@@ -87,10 +87,10 @@
 
 <div class= "indexaction">
 
-  <span class="indexnewpost">
-  <%= link_to post_new_path do %>
+  <a class="indexnewpost" href="#wanderingpet">
+  
   <div class="lgshapeshifter" style="background-image: url(/assets/newpost.svg)"></div>
-  <% end %>
+  </a>
   </span>
 
   <span class="indexlogout ">
