@@ -35,7 +35,7 @@ Usually when a non-pet lover sees a collared animal wandering outside, he/she mi
 been a potential rescuer and time could be saved.
 
 
-## What we want to achieve
+# What we want to achieve
 
 * To make creating a post to be fast and concise
 * Posts to contain more relevant information such as contact details, pet description, pet photo, location details
@@ -48,17 +48,8 @@ been a potential rescuer and time could be saved.
 * [Wireframes](https://github.com/arindamc14/Unit3-Project/blob/master/pre-project/Project-3-wireframe-b.pdf)
 * [ERB](https://github.com/arindamc14/Unit3-Project/blob/master/pre-project/Unit-3-Project.pdf)
 
-
-## To do
-Explanations of the technologies used-
-A couple paragraphs about the general approach you took-
-Installation instructions for any dependencies
-Link to your user stories – who are your users, what do they want, and why?
-Link to your wireframes – sketches of major views / interfaces in your application
-Descriptions of any unsolved problems or major hurdles your team had to overcome
-
 ## Challenges
-It was a first for all of us to collaborate through git on a projecct, we had a dangerous start where we were all commiting the master branch while avoiding
+It was a first for all of us to collaborate through git on a project, we had a dangerous start where we were all commiting the master branch while avoiding
 
 Working on RubyonRails was a challenge for all of us, especially the way how the MVCs are connected together.
 
@@ -69,10 +60,18 @@ Working on RubyonRails was a challenge for all of us, especially the way how the
 
 ## Made by 
 
-* [Yannie](https://github.com/yannieyeung) - 
-* [Ari](https://github.com/arindamc14) - 
-* [Shane](https://github.com/ReadyHash) - 
+* [Yannie](https://github.com/yannieyeung)
+* [Ari](https://github.com/arindamc14)
+* [Shane](https://github.com/ReadyHash)
 
 ## Acknowledgments
 
 * We want to thank our instructors Akira, Ben, Jessica and Stuart, for their help.
+
+## To do
+Explanations of the technologies used
+A couple paragraphs about the general approach you took
+Installation instructions for any dependencies
+Link to your user stories – who are your users, what do they want, and why?
+Link to your wireframes – sketches of major views / interfaces in your application
+Descriptions of any unsolved problems or major hurdles your team had to overcome
