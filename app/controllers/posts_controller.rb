@@ -8,13 +8,34 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @conversations = Conversation.all
-   
-    @owner = User.find_by(id: @post.user_id).email
+    
 
     if user_signed_in?
+      @owner = User.find_by(id: @post.user_id)
+      puts '&&&&&&&&&&&&&&&&&&&&&&&'
+      puts @owner.email
+      puts @owner.id
       @user = User.find(current_user.id)
+      puts '&&&&&&&&&&&&&&&&&&&&&&&'
+      puts @user.id
+
+      if @user.id != @owner.id
+      ownerId = @owner.id
+      userId = @user.id
+
+      @conversation = (Conversation.find_by(recipient_id: ownerId, sender_id: userId) or Conversation.find_by(recipient_id: userId, sender_id: ownerId))
+      if !@conversation
+        puts 'NO EXISTING CONVERSATION!!!!!!'
+      else      
+      end
+
     end
+
+  end
+    
+
+
+
   end
 
   def new
