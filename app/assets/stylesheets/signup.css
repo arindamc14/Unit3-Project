@@ -49,6 +49,7 @@ em {
   border: none;
   border-radius: 30px;
   background-color: black;
+  outline: none;
 }
 
 .signup-actions > input:hover {

@@ -51,6 +51,7 @@ form {
   border-radius: 30px;
   background-color: black;
   margin-top: 10px;
+  outline: none;
 }
 
 .login-actions > input:hover {

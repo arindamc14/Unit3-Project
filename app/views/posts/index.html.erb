@@ -88,14 +88,27 @@
 
 <div class= "indexaction">
 
-<%= link_to 'Profile', user_profile_path %>
+  <% if !@posts %>
+    <span class="indexinbox">
+      <%= link_to conversation_path do %>
+      <div class="lgshapeshifter" style="background-image: url(/assets/chat.svg)"></div>
+      <% end %>
+    </span>
+  <% end %>
 
-
-  <a class="indexnewpost" href="#wanderingpet">
-  
+  <span class="indexnewpost">
+  <%= link_to  post_new_path do %>
   <div class="lgshapeshifter" style="background-image: url(/assets/newpost.svg)"></div>
-  </a>
+  <% end %>
   </span>
+
+  <span class="indexprofile">
+  <%= link_to user_profile_path do%>
+    <div class="lgshapeshifter" style="background-image: url(/assets/profile.svg)"></div>
+    <% end %>
+  </span>
+
+
 
   <span class="indexlogout ">
     <%= link_to  destroy_user_session_url, method: :delete do %>
@@ -103,11 +116,11 @@
       </div>
       <% end %>
   </span>
+  
+
 
 </div>
 
-
-<%= link_to 'log out', destroy_user_session_url, method: :delete %>
 
 <% else %>
 <p class="index-prompt"> Please <%= link_to 'log in', new_user_session_url %> or <%= link_to 'sign up', new_user_registration_url %> to post a Lost or Found case. </p>

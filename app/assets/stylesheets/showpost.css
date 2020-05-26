@@ -48,6 +48,7 @@ body {
   width: 450px;
   text-align: center;
   margin: 5px auto;
+  margin-top: 12px;
 }
 
 @keyframes play30 {
