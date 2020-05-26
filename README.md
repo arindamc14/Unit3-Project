@@ -4,9 +4,14 @@ This is our submission for the 3rd Project for SEI-22
 
 ## What is this app?
 
-Wandering Pets is an app that allows users to easily
-* report a pet they had just lost
-* a wandering animal found in their neighbourhood that might belong to an owner.
+Presently, there is no centralised platform for lost and found pets in Singapore. 
+The app serves to provide a better lost and found platform for pet owners and users who find pets to communicate.
+
+* Users who find pets need to reach out to a large audience to broadcast the details on the pet that he or she found.
+
+* Owners who lose their pets need a way to share their contact details.
+
+* Organisations that specialise in pet rescue need a way to find owners who might've lost a pet or advertise unwanted pets to new owners
 
 ## Couldn't you use Facebook or other means?
 
@@ -14,11 +19,11 @@ Yes, there are existing social websites that allow users to posts their pets, wh
 
 ### Usability
 
+Facebook has multiple groups where users make posts. This isn’t a great user interface and often has too many posts on the page where matching the lost pet and the owner becomes difficult.
+
 While posts can reach a wide audience at a short amount of time, it cannot be easily searched when buried under other posts.
 
 As an owner who lost a pet, there is no easy way to search for specific breed or color of the pet you lost.
-
-Facebook groups only include lost pets but lack those that were spotted by someone else.
 
 ### Privacy
 
@@ -32,41 +37,10 @@ been a potential rescuer and time could be saved.
 
 ### Our Goal
 
-* easy navigation
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+* Creating a post to be fast and concise
+* Posts to contain more relevant information such as contact details, pet description, pet photo, location details
+* A better user interface to incentivise users who find pets to use the platform.
+* Ability to filter posts by animal type or color
 
 ## Deployment
 
@@ -74,35 +48,18 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Cloudinary](https://cloudinary.com/documentation) - To save and display pet images
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Wandering Pets is an app that allows users to easily
+* report a pet they had just lost
+* a wandering animal found in their neighbourhood that might belong to an owner.
 
 ## Made by 
 
-* Yannie - https://github.com/yannieyeung
-* Ari - https://github.com/arindamc14
-* Shane - https://github.com/ReadyHash
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* [Yannie](https://github.com/yannieyeung) - 
+* [Ari](https://github.com/arindamc14) - 
+* [Shane](https://github.com/ReadyHash) - 
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-* ...
+* We want to thank our instructors Akira, Jessica, Ben and Stuart, for their help.
