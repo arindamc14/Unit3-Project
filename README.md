@@ -35,16 +35,20 @@ Usually when a non-pet lover sees a collared animal wandering outside, he/she mi
 been a potential rescuer and time could be saved.
 
 
-### Our Goal
+## Our Goal
 
-* Creating a post to be fast and concise
+* To make creating a post to be fast and concise
 * Posts to contain more relevant information such as contact details, pet description, pet photo, location details
 * A better user interface to incentivise users who find pets to use the platform.
-* Ability to filter posts by animal type or color
+* The ability to filter posts by animal type or color
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+## To do
+Explanations of the technologies used
+A couple paragraphs about the general approach you took
+Installation instructions for any dependencies
+Link to your user stories – who are your users, what do they want, and why?
+Link to your wireframes – sketches of major views / interfaces in your application
+Descriptions of any unsolved problems or major hurdles your team had to overcome
 
 ## Built With
 
@@ -62,4 +66,4 @@ Wandering Pets is an app that allows users to easily
 
 ## Acknowledgments
 
-* We want to thank our instructors Akira, Jessica, Ben and Stuart, for their help.
+* We want to thank our instructors Akira, Ben, Jessica and Stuart, for their help.
