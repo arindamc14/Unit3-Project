@@ -56,7 +56,7 @@ class PostsController < ApplicationController
     uploaded_file = post_params[:file].path
     cloudnary_file = Cloudinary::Uploader.upload(uploaded_file)
     @post.url = cloudnary_file["url"]
-    
+
     if @post.save
       redirect_to @post
     else
@@ -76,8 +76,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy
+  def delete
     @post = Post.find(params[:id])
+
     @post.destroy
 
     redirect_to posts_path
