@@ -1,6 +1,6 @@
 # Wandering Pets
 
-This is our submission for the 3rd Project for SEI-22
+This is our submission for the 3rd Project in SEI-22
 
 ## What is this app?
 
