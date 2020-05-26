@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   get '/post/new', to: 'posts#new', as: 'post_new'
 
+  get '/post/new/lost', to: 'posts#new_lost', as: 'post_new_lost'
+
+  get '/post/new/found', to: 'posts#new_found', as: 'post_new_found'
+
   post '/posts', to: 'posts#create'
 
   get '/posts/:id/edit', to: 'posts#edit', as: 'post_edit'

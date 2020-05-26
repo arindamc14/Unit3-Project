@@ -77,5 +77,25 @@ body {
 
 .backlogo {
   margin: 10px auto;
+  margin-top: 0px;
   text-align: center;
+  display: inline-block;
+}
+
+.postdate > p {
+  margin-bottom: 0px;
+}
+
+.deletelogo {
+  margin: 10px auto;
+  margin-top: 0px;
+  text-align: center;
+  display: inline-block;
+}
+
+.editlogo {
+  margin: 10px auto;
+  margin-top: 0px;
+  text-align: center;
+  display: inline-block;
 }

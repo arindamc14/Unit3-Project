@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
 
+
+
   def index
-    @posts = Post.order('created_at DESC');
+    @posts = Post.order('created_at DESC').page params[:page]
   end
 
   def show
@@ -13,9 +15,18 @@ class PostsController < ApplicationController
   end
 
   def new
+  end
+
+  def new_lost
     @post = Post.new
     @type = PetType.all
-    @statuses = PetStatus.all
+    @status = PetStatus.find_by(status: "Lost")
+  end
+
+  def new_found
+    @post = Post.new
+    @type = PetType.all
+    @status = PetStatus.find_by(status: "Found")
   end
 
   def edit
@@ -39,12 +50,12 @@ class PostsController < ApplicationController
     Cloudinary::Uploader.upload(post_params[:file], options = {})
     uploaded_file = post_params[:file].path
     cloudnary_file = Cloudinary::Uploader.upload(uploaded_file)
-   
     @post.url = cloudnary_file["url"]
+    
     if @post.save
-      redirect_to posts_path
+      redirect_to @post
     else
-      render 'new'
+      render 'post_new_lost'
     end
   end
 

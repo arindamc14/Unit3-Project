@@ -24,18 +24,44 @@
     <%= @post.location %>
   </p>
 
+   <div class="postdate">
+    <p> <strong>Post Date: </strong><%= @post.created_at %>
+    </p>
+    </div>
+
   <% if @user == @post.user %>
-    <td><%= link_to 'Delete', post_path(@post),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %></td>
-      <%= link_to 'Edit', post_edit_path(@post) %>
+  <div class="actionlogo">
+      <div class="deletelogo">  
+      <%= link_to  post_path(@post),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } do%>
+              <div class="lgshapeshifter" style="background-image: url(/assets/delete.svg)"></div>
+        <% end %>
+      </div>
 
-  <% end %>
+      <div class="editlogo">
+          <%= link_to post_edit_path(@post) do %>
+            <div class="lgshapeshifter" style="background-image: url(/assets/edit.svg)"></div>
+            <% end %>
+      </div>
+        
+      <div class="backlogo">
+        <%= link_to  "/#helloh1" do %>
+        <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)"></div>
+        <% end %>
+      </div>
+    </div>
 
-  <div class="backlogo">
-    <%= link_to  root_path do %>
+
+  <% else %>
+    <div class="backlogo">
+    <%= link_to  "/#helloh1" do %>
       <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)">
       </div>
       <% end %>
   </div>
+
+  <% end %>
+
+
 </div>
