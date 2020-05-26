@@ -1,42 +1,49 @@
-
-<h1>Lost & Found Pets!</h1>
-
-
-
+<%= stylesheet_link_tag "postIndex" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
 
+
+<h1 class="index-h1">Lost & Found Pets!</h1>
 
 <% if user_signed_in? %>
 <%= link_to 'Profile', user_profile_path %>
 
-<%= link_to 'New Post', post_new_path %>
+<%= link_to 'Report a Lost/Found Case', post_new_path %>
 
 <%= link_to 'log out', destroy_user_session_url, method: :delete %>
 
 <% else %>
-<a> Please Login or Signup to post a Lost or Found case: </a>
-
-<%= link_to 'log in', new_user_session_url %>
-
-<%= link_to 'sign up', new_user_registration_url %>
+<p class="index-prompt"> Please <%= link_to 'log in', new_user_session_url %> or <%= link_to 'sign up', new_user_registration_url %> to post a Lost or Found case. </p>
 
 
 <% end %>
-
-<p>List of all the posts:</p>
-
-<% @posts.each do |post| %>
-  <div>
-    <a> Pet Status: </a><%= post.pet_status.status %><br/>
-    <a>Post Date: </a><%= post.created_at %><br/>
-    <img src=<%= post.url %>
-
-        <a>Pet Type: </a><%= post.pet_type.typee %><br/>
-        <a> Description: </a><%= post.description %><br/>
-        <a> Location: </a><%= post.location %><br/>
-        <%= link_to 'Show', post_path(post) %>
-      </p>
+<main class="index-container">
+  <% @posts.each do |post| %>
+    <div class="card my-3 index-div" id="myID" >
+    <%= link_to  post_path(post) do %>
+      <img src=<%= post.url %> class:"card-img-top index-img"/>
+      <% end %>
+        <div class="index-card-body">
+            <h4 class="card-pet-status-index">
+            <%= post.pet_status.status + ": " + post.pet_type.typee  %>
+            </h4>
+            <p class="card-date-index">
+            Post Date: </a><%= post.created_at %>
+            </p>
+            <p class="card-description">
+            Details:
+              <%= post.description %>
+            </p>
+            <p class="card-location">
+            Location: <%= post.location %>
+            </p>
+            <%= link_to post_path(post) do %>
+              <div class="test"></div>
+               <% end %>
+        </div>
     </div>
-  </div>
 
-<% end %>
+  <% end %>
+  <%= paginate @posts %>
+</main>
