@@ -1,0 +1,140 @@
+body {
+  font-family: "Bellota Text", cursive;
+  margin: 0 auto;
+}
+
+.newlostformh1 {
+  font-family: "Martel", serif;
+  text-align: center;
+  letter-spacing: 2px;
+  /* margin-top: -4px; */
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.uploadfile {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.uploadfile > input {
+  font-family: "Bellota Text", cursive;
+  font-style: italic;
+}
+#post_file {
+  text-align: center;
+  width: 200px;
+  font-family: "Bellota Text", cursive;
+  font-style: italic;
+}
+.choosefile {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#file-upload-button {
+  width: 50px;
+  font-family: "Bellota Text", cursive;
+  font-style: italic;
+}
+
+.lostpet-type-id > select {
+  margin-bottom: 10px;
+  width: 300px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  font-size: 18px;
+}
+
+.lostpet-type-id > label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.lostlocation-field > input {
+  margin-bottom: 10px;
+  width: 300px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  font-size: 18px;
+}
+
+.lostlocation-field > label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+}
+
+.lostdescription-field > label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+}
+
+.lostdescription-field > textarea {
+  margin-bottom: 10px;
+  width: 300px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  font-size: 18px;
+}
+.submitlostform > input {
+  font-family: "Martel", serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: white;
+  width: 200px;
+  height: 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  outline: none;
+}
+.submitlostform > input:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 6px 10px 1px rgba(136, 136, 136, 1);
+  cursor: pointer;
+}
+
+@keyframes play30 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -900px 0px;
+  }
+}
+
+.lgshapeshifter {
+  animation-duration: 500ms;
+  animation-timing-function: steps(30);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+.lgshapeshifter:hover {
+  animation-name: play30;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.backlogo {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}

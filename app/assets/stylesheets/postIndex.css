@@ -363,3 +363,11 @@ span.lgshapeshifter {
 .last > a {
   color: grey;
 }
+
+.prev > a {
+  color: grey;
+}
+
+.first > a {
+  color: grey;
+}
