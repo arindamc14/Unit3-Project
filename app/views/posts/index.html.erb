@@ -8,9 +8,9 @@
 
 <% if user_signed_in? %>
 
-<%= link_to 'log out', destroy_user_session_url, method: :delete %>
+<%= link_to 'log out', destroy_user_session_url, method: :delete %></br>
 
-<%= link_to 'Report a Lost/Found Case', post_new_path %>
+<%= link_to 'Report a Lost/Found Case', post_new_path %></br>
 
 <%= link_to 'My Inbox', conversations_path %>
 

@@ -27,4 +27,13 @@
 
 <% end %>
 
+<p>
+  <strong>Post Owner Email: </strong>
+  <%= @owner%>
+</p>
+
+<h3><%= link_to @owner, conversation_messages_path(@conversation)%></h3>
+
+
 <%= link_to 'Back', root_path %>
+

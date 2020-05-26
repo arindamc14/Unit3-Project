@@ -8,6 +8,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @conversations = Conversation.all
+   
+    @owner = User.find_by(id: @post.user_id).email
 
     if user_signed_in?
       @user = User.find(current_user.id)
