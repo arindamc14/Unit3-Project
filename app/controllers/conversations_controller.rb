@@ -14,6 +14,8 @@ class ConversationsController < ApplicationController
     end
     redirect_to conversation_messages_path(@conversation)
   end
+  def show
+  end
 
   private
   def conversation_params
