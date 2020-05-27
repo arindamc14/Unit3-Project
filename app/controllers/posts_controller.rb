@@ -20,6 +20,8 @@ class PostsController < ApplicationController
   end
 
   def new
+    @statuses = PetStatus.all
+    @type = PetType.all
   end
 
   def new_lost

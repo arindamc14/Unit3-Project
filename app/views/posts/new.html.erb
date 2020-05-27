@@ -1,4 +1,32 @@
+<%= stylesheet_link_tag "newform" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
-<%= link_to 'I Lost My Pet', post_new_lost_path %>
+<h1 class="newh1">Wandering Pet</h1>
+<div class = "new-animation-container">
 
-<%= link_to 'I Spotted a Pet', post_new_found_path %>
+
+<div class ="pagelink1">
+<%= link_to post_new_found_path do %>
+  <div class ="petbox blurbox" data-text="Report Found Pet">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex.js" %>
+  </div>
+  <% end %>
+
+  </div>
+
+  <div class ="pagelink2">
+ <%= link_to post_new_lost_path do %>
+  <div class ="indexlostpet blurbox" data-text="Report Lost Pet">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex1.js" %>
+  
+  </div>
+    <% end %>
+    </div>
+
+</div>
+
