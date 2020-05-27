@@ -1,0 +1,33 @@
+Project Post Mortem
+
+Approach and Process
+
+What in our process and approach to this project would we do differently next time?
+
+1. More iterative process. Focus on 1 aspect, move to the next. Troubleshoot when things are not going right with “puts”.
+2. Planning the entire outlook beforehand prior to doing it: for CSS aspects. Results in redoing the codes.
+3. Try to finish the basic features earlier so that CSS work has time. 
+What in our process and approach to this project went well that we would repeat next time?
+
+1. Generally communication was good
+2. Clear division of roles
+3. No major conflicts when branches are merged
+4. Completing the MVP early on helped us
+
+Code and Code Design
+
+What in our code and program design in the project would we do differently next time?
+
+1. Add live reload for messaging. Currently the user needs to refresh to see if someone has messaged him. There is no notification for messages received either. 
+2. Image upload needs validation to reject non jpeg/png files.
+3. Link up the pages more sensibly. Some minor features (like “back”) can be improved.
+4. We should have created sorting functions to sort pets by pet_type (dogs/cats/birds/rabbits)
+5. Location APIs or fixed location categories can be incorporated to provide sorting by location.
+6. Clean up some of the codes (eg: emails address must be hidden for privacy)
+7. Add user name through another form
+
+What in our code and program design in the project went well? Is there anything we would do the same next time?
+
+1. CSS animations.
+2. Cloudinary config to enable image upload
+3. Basic messaging feature
