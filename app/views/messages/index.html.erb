@@ -1,0 +1,21 @@
+
+<div>
+ <% @messages.each do |message| %>
+  <% if message.body %>
+   <% user = User.find(message.user_id) %>
+   <div>
+    <strong><%= user.email %> </strong><%= message.message_time %></div>
+        <%= message.body %>
+ <% end %>
+<% end %>
+</div>
+<div>
+<%= form_for [@conversation, @message] do |f| %>
+
+  <%= f.text_area :body, class: "form-control" %>
+
+  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+
+  <%= f.submit "Send Reply", class: "form-control btn btn-primary" %>
+<% end %>
+</div>

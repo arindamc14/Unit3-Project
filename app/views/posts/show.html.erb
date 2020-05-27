@@ -67,3 +67,15 @@
 
 </div>
 
+
+
+<% if @user.id != @owner.id %>
+  <% if @conversation %>
+    <h3><%= link_to 'Message Post Owner', conversation_messages_path(@conversation)%></h3>
+  <% else %>
+    <h3><%= link_to 'Message Post Owner', conversations_path(sender_id: @user.id, recipient_id: @owner.id), method: "post"%>
+  <% end %>
+<% end %>
+
+
+<%= link_to 'Back', root_path %>

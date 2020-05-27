@@ -86,15 +86,16 @@
 <% if user_signed_in? %>
 
 
+
 <div class= "indexaction">
 
-  <% if !@posts %>
+ 
     <span class="indexinbox">
       <%= link_to conversation_path do %>
       <div class="lgshapeshifter" style="background-image: url(/assets/chat.svg)"></div>
       <% end %>
     </span>
-  <% end %>
+
 
   <span class="indexnewpost">
   <%= link_to  post_new_path do %>
@@ -120,6 +121,7 @@
 
 
 </div>
+
 
 
 <% else %>
