@@ -56,7 +56,7 @@ Working on RubyonRails was a challenge for all of us, especially the way how the
 ## Built With
 
 * [RubyonRails](https://guides.rubyonrails.org/) - Application Framework
-* [Cloudinary](https://cloudinary.com/documentation) - To save and display pet images
+* [Cloudinary](https://cloudinary.com/documentation) - To save and display pet images (you would need to sign up an account)
 
 ## Made by 
 
@@ -66,12 +66,4 @@ Working on RubyonRails was a challenge for all of us, especially the way how the
 
 ## Acknowledgments
 
-* We want to thank our instructors Akira, Ben, Jessica and Stuart, for their help.
-
-## To do
-Explanations of the technologies used
-A couple paragraphs about the general approach you took
-Installation instructions for any dependencies
-Link to your user stories – who are your users, what do they want, and why?
-Link to your wireframes – sketches of major views / interfaces in your application
-Descriptions of any unsolved problems or major hurdles your team had to overcome
+* We want to thank our instructors Akira, Ben, Jessica and Stuart, for their help
