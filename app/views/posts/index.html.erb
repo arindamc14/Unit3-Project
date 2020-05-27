@@ -3,16 +3,126 @@
 <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
 
+<h1 class="index-title" id="wanderingpet">Wandering Pet</h1>
 
-<h1 class="index-h1">Lost & Found Pets!</h1>
+<% if user_signed_in? %>
+<div class = "index-animation-container">
+
+<div class ="pagelink">
+<%= link_to post_new_found_path do %>
+  <div class ="petbox blurbox" data-text="Report Found Pet">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex.js" %>
+  </div>
+  <% end %>
+
+  </div>
+
+  <div class ="pagelink">
+ <%= link_to post_new_lost_path do %>
+  <div class ="indexlostpet blurbox" data-text="Report Lost Pet">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex1.js" %>
+  
+  </div>
+    <% end %>
+    </div>
+
+   <a class="pagelink" href="#helloh1">
+    <div class ="indexallpet blurbox" data-text="View All Pets">
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+    <%= javascript_include_tag "lottie.js" %>
+    <%= javascript_include_tag "petindex2.js" %>
+
+    </div>
+  </a>
+</div>
+<% else %>
+  <div class = "index-animation-container">
+
+<div class ="pagelink">
+<%= link_to new_user_session_url do %>
+  <div class ="petbox blurbox" data-text="Report Found Pet">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex.js" %>
+  </div>
+  <% end %>
+
+  </div>
+
+  <div class ="pagelink">
+ <%= link_to new_user_session_url do %>
+  <div class ="indexlostpet blurbox" data-text="Report Lost Pet">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "petindex1.js" %>
+  
+  </div>
+    <% end %>
+    </div>
+
+   <a class="pagelink" href="#helloh1">
+    <div class ="indexallpet blurbox" data-text="View All Pets">
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+    <%= javascript_include_tag "lottie.js" %>
+    <%= javascript_include_tag "petindex2.js" %>
+
+    </div>
+  </a>
+</div>
+
+<% end %>
+
+<div class="break"></div>
+
+
+<a href="#helloh1"></a>
+
+<h1 class="index-h1" id="helloh1">Lost & Found Pets!</h1>
 
 <% if user_signed_in? %>
 
-<%= link_to 'log out', destroy_user_session_url, method: :delete %></br>
 
-<%= link_to 'Report a Lost/Found Case', post_new_path %></br>
 
-<%= link_to 'My Inbox', conversations_path %>
+<div class= "indexaction">
+
+ 
+    <span class="indexinbox">
+      <%= link_to conversation_path do %>
+      <div class="lgshapeshifter" style="background-image: url(/assets/chat.svg)"></div>
+      <% end %>
+    </span>
+
+
+  <span class="indexnewpost">
+  <%= link_to  post_new_path do %>
+  <div class="lgshapeshifter" style="background-image: url(/assets/newpost.svg)"></div>
+  <% end %>
+  </span>
+
+  <span class="indexprofile">
+  <%= link_to user_profile_path do%>
+    <div class="lgshapeshifter" style="background-image: url(/assets/profile.svg)"></div>
+    <% end %>
+  </span>
+
+
+
+  <span class="indexlogout ">
+    <%= link_to  destroy_user_session_url, method: :delete do %>
+      <div class="lgshapeshifter" style="background-image: url(/assets/logout.svg)">
+      </div>
+      <% end %>
+  </span>
+  
+
+
+</div>
+
+
 
 <% else %>
 <p class="index-prompt"> Please <%= link_to 'log in', new_user_session_url %> or <%= link_to 'sign up', new_user_registration_url %> to post a Lost or Found case. </p>
@@ -31,7 +141,7 @@
             </h4>
             <p class="card-date-index">
             Post Date: </a><%= post.created_at %>
-            </p>  
+            </p>
             <p class="card-description">
             Details:
               <%= post.description %>
@@ -46,7 +156,12 @@
     </div>
 
   <% end %>
-  <%= paginate @posts %>
+
+ 
 </main>
+<div class = "pageindicator"
+  <%= paginate @posts %>
+  </div>
+
 
 

@@ -38,7 +38,14 @@ class PostsController < ApplicationController
 
   end
 
+  def account
+    @userpost = Post.where(user_id: current_user.id)
+    @email = current_user.email
+  end
+
   def new
+    @statuses = PetStatus.all
+    @type = PetType.all
   end
 
   def new_lost
@@ -75,7 +82,7 @@ class PostsController < ApplicationController
     uploaded_file = post_params[:file].path
     cloudnary_file = Cloudinary::Uploader.upload(uploaded_file)
     @post.url = cloudnary_file["url"]
-    
+
     if @post.save
       redirect_to @post
     else
@@ -87,6 +94,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.user = current_user
 
+    # to check for any errors
     if @post.update(post_params)
       redirect_to @post
     else
@@ -94,8 +102,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy
+  def delete
     @post = Post.find(params[:id])
+
     @post.destroy
 
     redirect_to posts_path

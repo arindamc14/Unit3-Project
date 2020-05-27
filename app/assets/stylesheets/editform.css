@@ -1,0 +1,132 @@
+body {
+  font-family: "Bellota Text", cursive;
+  margin: 0 auto;
+}
+
+.editformh1 {
+  font-family: "Martel", serif;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: -4px;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.editpetstatus > select {
+  margin-bottom: 5x;
+  width: 300px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  font-size: 18px;
+}
+
+.editpetstatus > label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+}
+
+.editpetid > select {
+  margin-bottom: 5px;
+  width: 300px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  font-size: 18px;
+}
+
+.editpetid > label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+}
+
+.editlocation {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.editlocation > input {
+  margin-bottom: 25px;
+  width: 300px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.editlocation > label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+}
+
+.editdescriptiond > label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+}
+
+.editdescription > textarea {
+  margin-bottom: 5px;
+  width: 300px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.submitedit > input {
+  font-family: "Martel", serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: white;
+  width: 200px;
+  height: 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  outline: none;
+  margin-top: 10px;
+}
+
+.submitedit > input:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 6px 10px 1px rgba(136, 136, 136, 1);
+  cursor: pointer;
+}
+
+@keyframes play30 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -900px 0px;
+  }
+}
+
+.lgshapeshifter {
+  animation-duration: 500ms;
+  animation-timing-function: steps(30);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  margin: 10px;
+}
+.lgshapeshifter:hover {
+  animation-name: play30;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.backlogo {
+  margin: 10px auto;
+  text-align: center;
+}

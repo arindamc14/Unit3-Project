@@ -1,31 +1,72 @@
+<%= stylesheet_link_tag "showpost" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
 
-<p>
-  <strong>Pet Status: </strong>
-  <%= @post.pet_status.status %>
-</p>
-
-<p>
-	<img src=<%= @post.url %>
-</p>
+<div class="postcontainer">
+  <div class ="postimg">
+    <img src=<%= @post.url %>
+  </div>
 
 
-<p>
-  <strong>Description: </strong>
-  <%= @post.description %>
-</p>
+  <div class="postpetstatus">
+    <strong>Pet Status: </strong>
+    <%= @post.pet_status.status %>
+  </div>
 
-<p>
-  <strong>Location: </strong>
-  <%= @post.location %>
-</p>
 
-<% if @user == @post.user %>
-	<td><%= link_to 'Delete', post_path(@post),
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %></td>
-    <%= link_to 'Edit', post_edit_path(@post) %>
+  <div class="postdescription"
+   <p> <strong>Description: </strong>
+    <%= @post.description %>
+  </p>
+  </div>
 
-<% end %>
+  <p>
+    <strong>Location: </strong>
+    <%= @post.location %>
+  </p>
+
+   <div class="postdate">
+    <p> <strong>Post Date: </strong><%= @post.created_at %>
+    </p>
+    </div>
+
+  <% if @user == @post.user %>
+  <div class="actionlogo">
+      <div class="deletelogo">  
+      <%= link_to  post_path(@post),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } do%>
+              <div class="lgshapeshifter" style="background-image: url(/assets/delete.svg)"></div>
+        <% end %>
+      </div>
+
+      <div class="editlogo">
+          <%= link_to post_edit_path(@post) do %>
+            <div class="lgshapeshifter" style="background-image: url(/assets/edit.svg)"></div>
+            <% end %>
+      </div>
+        
+      <div class="backlogo">
+        <%= link_to  "/#helloh1" do %>
+        <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)"></div>
+        <% end %>
+      </div>
+    </div>
+
+
+  <% else %>
+    <div class="backlogo">
+    <%= link_to  "/#helloh1" do %>
+      <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)">
+      </div>
+      <% end %>
+  </div>
+
+  <% end %>
+
+
+</div>
+
 
 
 <% if @user.id != @owner.id %>
@@ -38,4 +79,3 @@
 
 
 <%= link_to 'Back', root_path %>
-

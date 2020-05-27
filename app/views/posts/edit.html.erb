@@ -1,33 +1,48 @@
-<h1>Edit article</h1>
+ <%= stylesheet_link_tag "editform" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
+ 
+ <div class ="petform">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" %>
+  <%= javascript_include_tag "lottie.js" %>
+  <%= javascript_include_tag "form.js" %>
+  </div>
+
+<h1 class="editformh1">Edit Your Post</h1>
 
 <%= form_with scope: @post, model: @post, local: true do |form| %>
 
 
 
-  <p>
+  <div class="editpetstatus">
   <%= form.label :pet_status_id %><br>
   <%= form.collection_select :pet_status_id, @statuses, :id, :status %>
   </p>
 
-  <p>
+  <div class="editpetid">
   <%= form.label :pet_type_id %><br>
   <%= form.collection_select :pet_type_id, @type, :id, :typee %>
   </p>
 
-  <p>
+  <div class="editlocation">
   <%= form.label :location %><br>
   <%= form.text_field :location %>
-  </p>
+  </div>
 
-  <p>
+  <div class="editdescription">
   <%= form.label :description %><br>
   <%= form.text_area :description %>
-  </p>
+  </div>
 
 
-  <p>
+  <div class="submitedit">
   <%= form.submit %>
-  </p>
+  </div>
 <% end %>
 
-<%= link_to 'Back', root_path %>
+ <div class="backlogo">
+    <%= link_to  root_path do %>
+      <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)">
+      </div>
+      <% end %>
+  </div>

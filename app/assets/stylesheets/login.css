@@ -2,8 +2,7 @@ body {
   font-family: "Bellota Text", cursive;
   margin: 0 auto;
 }
-
-.sign-up-h2 {
+.login-h2 {
   font-family: "Martel", serif;
   text-align: center;
   letter-spacing: 2px;
@@ -24,7 +23,16 @@ form {
   text-align: center;
 }
 
-.signup-field > input {
+.login-email-field > input {
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: solid black 1px;
+  font-family: "Bellota Text", cursive;
+  outline: none;
+  width: 250px;
+}
+
+.login-pw-field > input {
   margin-bottom: 10px;
   border: none;
   border-bottom: solid black 1px;
@@ -32,14 +40,7 @@ form {
   outline: none;
 }
 
-.signup-field > label,
-em {
-  font-family: "Martel", serif;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.signup-actions > input {
+.login-actions > input {
   font-family: "Martel", serif;
   font-weight: 400;
   font-size: 13px;
@@ -49,27 +50,24 @@ em {
   border: none;
   border-radius: 30px;
   background-color: black;
+  margin-top: 10px;
   outline: none;
 }
 
-.signup-actions > input:hover {
+.login-actions > input:hover {
   transform: scale(1.2);
   box-shadow: 5px 6px 10px 1px rgba(136, 136, 136, 1);
   cursor: pointer;
 }
 
-.email-line > input {
-  width: 250px;
-}
-
-span {
+.loginspan {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-span > p {
-  margin-top: 5px;
-}
-
-a {
-  font-style: italic;
+.loginspan > a {
+  margin-left: 10px;
+  margin-top: 10px;
+  color: grey;
 }

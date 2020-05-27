@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag "account" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;1,400;1,700&display=swap" %>
+<%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Martel:wght@300;400;600;700;800&display=swap" %>
+
+
+<h2 class="accounth2">Hi,</h2> 
+<h1 class="accounth1"><%= @email.split("@")[0] %></h1>
+
+
+<main class="profile-container">
+<% @userpost.each do |post| %>
+	<div class="profilepost">
+		<div class="profilepic">
+			<%= link_to  post_path(post) do %>
+			<img src=<%= post.url %> class:"profile-img"/>
+			<% end %>
+		</div>
+
+		<div class="profilepostbody">
+			
+	    	<a> Pet Status: </a><%= post.pet_status.status %><br/>
+
+
+
+	      <a>Pet Type: </a><%= post.pet_type.typee %><br/>
+	      <a> Description: </a><%= post.description %><br/>
+	      <a> Location: </a><%= post.location %><br/>
+	      <a>Post Date: </a><%= post.created_at %><br/>
+
+	  
+	  	</div>
+	</div>		
+
+<% end %>
+      <div class="accountbacklogo">
+        <%= link_to  "/#helloh1" do %>
+        <div class="lgshapeshifter" style="background-image: url(/assets/back.svg)"></div>
+        <% end %>
+      </div>
+</main>
+
